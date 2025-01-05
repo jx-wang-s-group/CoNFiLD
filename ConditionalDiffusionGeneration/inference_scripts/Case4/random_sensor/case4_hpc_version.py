@@ -114,5 +114,6 @@ output_dir = "output_files/"
 torch.save(operator, f"{output_dir}/operator.pt")
 torch.save(samples, f"{output_dir}/samples.pt")
 np.save(f"{output_dir}/pred_data_list.npy", pred_data_list)
+torch.save(gen_fields, f"{output_dir}/gen_fields.pt")  # Save gen_fields
 
 print("Files saved successfully!")
