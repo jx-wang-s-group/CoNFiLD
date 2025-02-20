@@ -19,6 +19,8 @@ np.random.seed(42)
 
 inp = ri.basic_input(sys.argv[1])
 
+print(f"sys.argv[1]: {sys.argv[1]}")
+
 ## Hyperparams
 test_batch_size = inp.test_batch_size # num of samples to generate
 time_length = inp.time_length
@@ -43,8 +45,9 @@ unet_model = create_model(image_size=image_size,
                           attention_resolutions=attention_resolutions
                         )
 
-unet_model.load_state_dict(torch.load(inp.ema_path))
-unet_model.to(device);
+unet_model.load_state_dict(torch.load(inp.ema_path, map_location=torch.device('cpu')))
+unet_model.to(device)
+
 
 diff_model = create_gaussian_diffusion(steps=steps,
                                        noise_schedule=noise_schedule

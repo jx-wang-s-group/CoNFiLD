@@ -1,2 +1,7 @@
 .env
 __pycache__
+data/
+latents/
+model/
+samples.pth
+ConditionalDiffusionGeneration/inference_scripts/Case4/random_sensor/input
