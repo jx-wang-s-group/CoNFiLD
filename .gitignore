@@ -5,3 +5,4 @@ latents/
 model/
 samples.pth
 ConditionalDiffusionGeneration/inference_scripts/Case4/random_sensor/input
+ConditionalDiffusionGeneration/inference_scripts/Case3/random_sensor/input_case3

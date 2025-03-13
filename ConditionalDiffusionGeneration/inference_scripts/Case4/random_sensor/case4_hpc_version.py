@@ -56,6 +56,11 @@ operator = get_operator(
 
 noiser = get_noise(sigma=0.0, name='gaussian')
 
+# For masking in time
+# start, stop, step = 0, 257, 5
+mask = torch.ones_like(true_measurement, device=device)
+# mask[start:stop:step] = 1
+
 # Conditioning Method
 cond_method = get_conditioning_method(operator=operator, noiser=noiser, name='ps', scale=1.)
 measurement_cond_fn = partial(cond_method.conditioning)
