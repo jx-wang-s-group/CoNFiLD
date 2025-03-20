@@ -128,6 +128,8 @@ class Case3Operator(NonLinearOperator):
         self.batch_size = batch_size
         
     def _unnorm(self, norm_data):
+        print("DEBUG: _unnorm -> norm_data.shape =", norm_data.shape)
+        print("DEBUG: self.max_val.shape =", self.max_val.shape, " self.min_val.shape =", self.min_val.shape)
         return ((norm_data[:, 0, ...] + 1)*(self.max_val- self.min_val)/2 + self.min_val)[:, None, ...] 
     
     def forward(self, data, **kwargs):

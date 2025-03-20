@@ -14,7 +14,7 @@ num_head_channels: 64
 attention_resolutions: "32,16,8"
 channel_mult: null
 
-ema_path: /add/ema/path/here
+ema_path: /Users/minghan/Library/CloudStorage/GoogleDrive-john.chuicandoit@gmail.com/My Drive/CoNFiLD/model/Case1/diffusion/ema_0.9999_550000.pt
 
 #diff:
 steps: 1000
